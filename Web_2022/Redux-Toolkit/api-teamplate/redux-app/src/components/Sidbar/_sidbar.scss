@@ -1,0 +1,18 @@
+.sidbar {
+  width: 25%;
+  background-color: #f6f6f6;
+  height: calc(100vh - 36px);
+  padding: 10px;
+  ul {
+    li {
+      a {
+        display: block;
+        color: black;
+        padding: 7px;
+        margin-bottom: 10px;
+        font-size: 18px;
+        text-align: center;
+      }
+    }
+  }
+}

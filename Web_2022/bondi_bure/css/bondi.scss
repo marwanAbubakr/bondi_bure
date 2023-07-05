@@ -1,0 +1,229 @@
+/* Start varibles */
+$--dark-color: #19283f;
+$--grenn-color: #33d1cc;
+$--red-color: #ff3150;
+$--yellow-color: #ffc400;
+$--section-color: #eff7fa;
+/* End varibles */
+
+/* Start mixen */
+@mixin btn-Style {
+  background-color: $--red-color;
+  color: $--yellow-color;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  &:hover {
+    color: $--yellow-color;
+  }
+}
+@mixin main-title {
+  &::after {
+    content: '';
+    width: 120px;
+    height: 2px;
+    background-color: $--grenn-color;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.main-title {
+  @include main-title;
+}
+.main-btn {
+  @include btn-Style;
+}
+/* End mixen */
+body {
+  font-family: 'Roboto', sans-serif;
+  text-transform: capitalize;
+  // height: 100vh; => just for test
+}
+
+/* Start Navbar */
+.navbar {
+  background-color: $--dark-color;
+  .navbar-nav {
+    .nav-link {
+      color: white;
+    }
+    .nav-link.active,
+    .nav-link:focus,
+    .nav-link:hover {
+      color: $--grenn-color;
+    }
+  }
+  .search {
+    border-left: 1px solid $--grenn-color;
+    svg {
+      color: $--grenn-color;
+    }
+  }
+  .navbar-toggler {
+    color: white;
+    font-size: 25px;
+    border-color: white;
+    &[aria-expanded='false'] {
+      &:focus {
+        box-shadow: none;
+      }
+    }
+  }
+}
+/* End Navbar */
+
+/* Start Landing*/
+.landing {
+  background-color: $--dark-color;
+  min-height: calc(100vh - 72px);
+  .main-btn {
+    @include btn-Style;
+  }
+}
+/* Start Features */
+/* End Features */
+.features {
+  .feat {
+    h4 {
+      color: $--yellow-color;
+    }
+    .icon-holder {
+      height: 200px;
+      svg {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .number {
+        font-size: 12rem;
+        color: $--section-color;
+      }
+      .icon {
+        color: $--grenn-color;
+      }
+    }
+  }
+}
+/* End Landing*/
+/* Start Our Work */
+.our-work {
+  background-color: $--section-color;
+  ul {
+    .active {
+      background-color: $--red-color;
+      color: $--yellow-color;
+    }
+    li {
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      &:not(.active) {
+        &:hover {
+          color: $--red-color;
+        }
+      }
+    }
+  }
+  .box {
+    padding: 5px;
+    overflow: hidden;
+    position: relative;
+    &::before {
+      content: attr(data-work);
+      position: absolute;
+      background-color: green;
+      width: calc(100% - 10px);
+      height: calc(100% - 10px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      color: white;
+      transition: 0.3s;
+      font-size: 1.5rem;
+      transform: translateX(calc(-100% - 50%));
+    }
+    &:hover {
+      &::before {
+        transform: translateX(0);
+      }
+    }
+  }
+}
+/* End Our Work */
+/* Srart Stuff */
+.stuff {
+  .description {
+    max-width: 500px;
+  }
+}
+/* End Stuff */
+/* Start Team */
+.team {
+  background-color: $--section-color;
+  h2 {
+    color: $--yellow-color;
+  }
+  .box {
+    h4 {
+      background-color: $--grenn-color;
+    }
+  }
+}
+/* End Team */
+/* Start Project */
+.project {
+  background-color: $--dark-color;
+}
+/* End Project */
+/* Start Subscribe */
+.subscribe {
+  background-color: $--yellow-color;
+  input[type='text'] {
+    border: none;
+    border-bottom: 1px solid white;
+    &:focus {
+      outline: none;
+    }
+    &::placeholder {
+      color: white;
+    }
+  }
+  input[type='submit'] {
+    background-color: $--dark-color;
+    color: $--yellow-color;
+  }
+}
+/* End Subscribe */
+/* Start Footer */
+.footer {
+  background-color: $--dark-color;
+  > span {
+    color: $--grenn-color;
+  }
+  div {
+    span {
+      color: $--yellow-color;
+    }
+  }
+  .contact {
+    ul {
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+  .facebook {
+    background-color: #1877f2;
+  }
+  .twitter {
+    background-color: #1da1f2;
+  }
+  .linkedin {
+    background-color: #0077b5;
+  }
+  .youtube {
+    background-color: #ff0000;
+  }
+}
+/* End Footer */

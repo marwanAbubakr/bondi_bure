@@ -1,0 +1,263 @@
+/* Start varibles */
+/* End varibles */
+/* Start mixen */
+.main-title::after {
+  content: '';
+  width: 120px;
+  height: 2px;
+  background-color: #33d1cc;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.main-btn {
+  background-color: #ff3150;
+  color: #ffc400;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+}
+
+.main-btn:hover {
+  color: #ffc400;
+}
+
+/* End mixen */
+body {
+  font-family: 'Roboto', sans-serif;
+  text-transform: capitalize;
+}
+
+/* Start Navbar */
+.navbar {
+  background-color: #19283f;
+}
+
+.navbar .navbar-nav .nav-link {
+  color: white;
+}
+
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover {
+  color: #33d1cc;
+}
+
+.navbar .search {
+  border-left: 1px solid #33d1cc;
+}
+
+.navbar .search svg {
+  color: #33d1cc;
+}
+
+.navbar .navbar-toggler {
+  color: white;
+  font-size: 25px;
+  border-color: white;
+}
+
+.navbar .navbar-toggler[aria-expanded='false']:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+/* End Navbar */
+/* Start Landing*/
+.landing {
+  background-color: #19283f;
+  min-height: calc(100vh - 72px);
+}
+
+.landing .main-btn {
+  background-color: #ff3150;
+  color: #ffc400;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+}
+
+.landing .main-btn:hover {
+  color: #ffc400;
+}
+
+/* Start Features */
+/* End Features */
+.features .feat h4 {
+  color: #ffc400;
+}
+
+.features .feat .icon-holder {
+  height: 200px;
+}
+
+.features .feat .icon-holder svg {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.features .feat .icon-holder .number {
+  font-size: 12rem;
+  color: #eff7fa;
+}
+
+.features .feat .icon-holder .icon {
+  color: #33d1cc;
+}
+
+/* End Landing*/
+/* Start Our Work */
+.our-work {
+  background-color: #eff7fa;
+}
+
+.our-work ul .active {
+  background-color: #ff3150;
+  color: #ffc400;
+}
+
+.our-work ul li {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.our-work ul li:not(.active):hover {
+  color: #ff3150;
+}
+
+.our-work .box {
+  padding: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.our-work .box::before {
+  content: attr(data-work);
+  position: absolute;
+  background-color: green;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: bold;
+  color: white;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  font-size: 1.5rem;
+  -webkit-transform: translateX(calc(-100% - 50%));
+          transform: translateX(calc(-100% - 50%));
+}
+
+.our-work .box:hover::before {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+/* End Our Work */
+/* Srart Stuff */
+.stuff .description {
+  max-width: 500px;
+}
+
+/* End Stuff */
+/* Start Team */
+.team {
+  background-color: #eff7fa;
+}
+
+.team h2 {
+  color: #ffc400;
+}
+
+.team .box h4 {
+  background-color: #33d1cc;
+}
+
+/* End Team */
+/* Start Project */
+.project {
+  background-color: #19283f;
+}
+
+/* End Project */
+/* Start Subscribe */
+.subscribe {
+  background-color: #ffc400;
+}
+
+.subscribe input[type='text'] {
+  border: none;
+  border-bottom: 1px solid white;
+}
+
+.subscribe input[type='text']:focus {
+  outline: none;
+}
+
+.subscribe input[type='text']::-webkit-input-placeholder {
+  color: white;
+}
+
+.subscribe input[type='text']:-ms-input-placeholder {
+  color: white;
+}
+
+.subscribe input[type='text']::-ms-input-placeholder {
+  color: white;
+}
+
+.subscribe input[type='text']::placeholder {
+  color: white;
+}
+
+.subscribe input[type='submit'] {
+  background-color: #19283f;
+  color: #ffc400;
+}
+
+/* End Subscribe */
+/* Start Footer */
+.footer {
+  background-color: #19283f;
+}
+
+.footer > span {
+  color: #33d1cc;
+}
+
+.footer div span {
+  color: #ffc400;
+}
+
+.footer .contact ul svg {
+  width: 20px;
+  height: 20px;
+}
+
+.footer .facebook {
+  background-color: #1877f2;
+}
+
+.footer .twitter {
+  background-color: #1da1f2;
+}
+
+.footer .linkedin {
+  background-color: #0077b5;
+}
+
+.footer .youtube {
+  background-color: #ff0000;
+}
+
+/* End Footer */
+/*# sourceMappingURL=bondi.css.map */
